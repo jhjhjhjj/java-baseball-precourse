@@ -2,10 +2,22 @@ package utils;
 
 import java.util.Random;
 
-public class RandomUtils {
+public class RandomUtils 
+{
     private static final Random RANDOM = new Random();
+    private int num = 0;
+    //private RandomUtils() {
+    //}
+    
+    public void setRandomNum()
+    {
+        num = RANDOM.nextInt(9999);
+    }
 
-    private RandomUtils() {
+    public String getRandom()
+    {
+        int tmpNum = num;
+        return Integer.toString(tmpNum);
     }
 
     public static int nextInt(final int startInclusive, final int endInclusive) {
